@@ -4,8 +4,8 @@ from dataclasses import dataclass, field, replace
 import torch
 from safetensors import safe_open
 
-from ltx_core.components.guiders import MultiModalGuiderParams
-from ltx_core.types import SpatioTemporalScaleFactors
+from genio_core.components.guiders import MultiModalGuiderParams
+from genio_core.types import SpatioTemporalScaleFactors
 
 # =============================================================================
 # Diffusion Schedule

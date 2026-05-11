@@ -3,15 +3,15 @@ from collections.abc import Iterator
 
 import torch
 
-from ltx_core.components.diffusion_steps import Res2sDiffusionStep
-from ltx_core.components.guiders import MultiModalGuider, MultiModalGuiderParams
-from ltx_core.components.noisers import GaussianNoiser
-from ltx_core.components.schedulers import LTX2Scheduler
-from ltx_core.loader import LoraPathStrengthAndSDOps
-from ltx_core.loader.registry import Registry
-from ltx_core.model.video_vae import TilingConfig, get_video_chunks_number
-from ltx_core.quantization import QuantizationPolicy
-from ltx_core.types import Audio, VideoLatentShape, VideoPixelShape
+from genio_core.components.diffusion_steps import Res2sDiffusionStep
+from genio_core.components.guiders import MultiModalGuider, MultiModalGuiderParams
+from genio_core.components.noisers import GaussianNoiser
+from genio_core.components.schedulers import LTX2Scheduler
+from genio_core.loader import LoraPathStrengthAndSDOps
+from genio_core.loader.registry import Registry
+from genio_core.model.video_vae import TilingConfig, get_video_chunks_number
+from genio_core.quantization import QuantizationPolicy
+from genio_core.types import Audio, VideoLatentShape, VideoPixelShape
 from ltx_pipelines.utils.args import ImageConditioningInput, hq_2_stage_arg_parser
 from ltx_pipelines.utils.blocks import (
     AudioDecoder,

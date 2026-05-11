@@ -6,10 +6,10 @@ from typing import Callable
 import torch
 from tqdm import tqdm
 
-from ltx_core.components.diffusion_steps import Res2sDiffusionStep
-from ltx_core.components.protocols import DiffusionStepProtocol
-from ltx_core.model.transformer import X0Model
-from ltx_core.utils import to_denoised, to_velocity
+from genio_core.components.diffusion_steps import Res2sDiffusionStep
+from genio_core.components.protocols import DiffusionStepProtocol
+from genio_core.model.transformer import X0Model
+from genio_core.utils import to_denoised, to_velocity
 from ltx_pipelines.utils.helpers import post_process_latent, timesteps_from_mask
 from ltx_pipelines.utils.res2s import get_res2s_coefficients
 from ltx_pipelines.utils.types import Denoiser, LatentState

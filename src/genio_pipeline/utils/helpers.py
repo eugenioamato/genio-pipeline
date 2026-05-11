@@ -3,18 +3,18 @@ import logging
 
 import torch
 
-from ltx_core.components.noisers import Noiser
-from ltx_core.conditioning import (
+from genio_core.components.noisers import Noiser
+from genio_core.conditioning import (
     ConditioningItem,
     VideoConditionByKeyframeIndex,
     VideoConditionByLatentIndex,
 )
-from ltx_core.model.audio_vae import encode_audio
-from ltx_core.model.transformer import Modality
-from ltx_core.model.video_vae import TilingConfig, VideoEncoder
-from ltx_core.text_encoders.gemma import GemmaTextEncoder
-from ltx_core.tools import LatentTools
-from ltx_core.types import AudioLatentShape, LatentState, VideoLatentShape, VideoPixelShape
+from genio_core.model.audio_vae import encode_audio
+from genio_core.model.transformer import Modality
+from genio_core.model.video_vae import TilingConfig, VideoEncoder
+from genio_core.text_encoders.gemma import GemmaTextEncoder
+from genio_core.tools import LatentTools
+from genio_core.types import AudioLatentShape, LatentState, VideoLatentShape, VideoPixelShape
 from ltx_pipelines.utils.args import ImageConditioningInput
 from ltx_pipelines.utils.media_io import (
     decode_audio_from_file,

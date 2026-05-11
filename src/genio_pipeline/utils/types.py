@@ -3,10 +3,10 @@ from typing import Protocol
 
 import torch
 
-from ltx_core.components.patchifiers import AudioPatchifier, VideoLatentPatchifier
-from ltx_core.conditioning import ConditioningItem
-from ltx_core.model.transformer import X0Model
-from ltx_core.types import LatentState
+from genio_core.components.patchifiers import AudioPatchifier, VideoLatentPatchifier
+from genio_core.conditioning import ConditioningItem
+from genio_core.model.transformer import X0Model
+from genio_core.types import LatentState
 from ltx_pipelines.utils.constants import VIDEO_LATENT_CHANNELS, VIDEO_SCALE_FACTORS
 
 

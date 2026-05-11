@@ -12,7 +12,7 @@ from PIL import Image
 from torch._prims_common import DeviceLikeType
 from tqdm import tqdm
 
-from ltx_core.types import Audio, VideoPixelShape
+from genio_core.types import Audio, VideoPixelShape
 from ltx_pipelines.utils.constants import DEFAULT_IMAGE_CRF
 
 logger = logging.getLogger(__name__)

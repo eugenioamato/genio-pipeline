@@ -2,8 +2,8 @@ import argparse
 from pathlib import Path
 from typing import NamedTuple
 
-from ltx_core.loader import LTXV_LORA_COMFY_RENAMING_MAP, LoraPathStrengthAndSDOps
-from ltx_core.quantization import QuantizationPolicy
+from genio_core.loader import LTXV_LORA_COMFY_RENAMING_MAP, LoraPathStrengthAndSDOps
+from genio_core.quantization import QuantizationPolicy
 from ltx_pipelines.utils.constants import (
     DEFAULT_IMAGE_CRF,
     DEFAULT_LORA_STRENGTH,

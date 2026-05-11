@@ -14,17 +14,17 @@ from typing import Callable, TypeVar
 
 import torch
 
-from ltx_core.batch_split import BatchSplitAdapter
-from ltx_core.components.diffusion_steps import EulerDiffusionStep
-from ltx_core.components.noisers import Noiser
-from ltx_core.components.patchifiers import AudioPatchifier, VideoLatentPatchifier
-from ltx_core.components.protocols import DiffusionStepProtocol
-from ltx_core.layer_streaming import LayerStreamingWrapper
-from ltx_core.loader import SDOps
-from ltx_core.loader.primitives import LoraPathStrengthAndSDOps
-from ltx_core.loader.registry import DummyRegistry, Registry
-from ltx_core.loader.single_gpu_model_builder import SingleGPUModelBuilder as Builder
-from ltx_core.model.audio_vae import (
+from genio_core.batch_split import BatchSplitAdapter
+from genio_core.components.diffusion_steps import EulerDiffusionStep
+from genio_core.components.noisers import Noiser
+from genio_core.components.patchifiers import AudioPatchifier, VideoLatentPatchifier
+from genio_core.components.protocols import DiffusionStepProtocol
+from genio_core.layer_streaming import LayerStreamingWrapper
+from genio_core.loader import SDOps
+from genio_core.loader.primitives import LoraPathStrengthAndSDOps
+from genio_core.loader.registry import DummyRegistry, Registry
+from genio_core.loader.single_gpu_model_builder import SingleGPUModelBuilder as Builder
+from genio_core.model.audio_vae import (
     AUDIO_VAE_DECODER_COMFY_KEYS_FILTER,
     AUDIO_VAE_ENCODER_COMFY_KEYS_FILTER,
     VOCODER_COMFY_KEYS_FILTER,
@@ -32,17 +32,17 @@ from ltx_core.model.audio_vae import (
     AudioEncoderConfigurator,
     VocoderConfigurator,
 )
-from ltx_core.model.audio_vae import (
+from genio_core.model.audio_vae import (
     decode_audio as vae_decode_audio,
 )
-from ltx_core.model.transformer import (
+from genio_core.model.transformer import (
     LTXV_MODEL_COMFY_RENAMING_MAP,
     LTXModelConfigurator,
     X0Model,
 )
-from ltx_core.model.transformer.compiling import COMPILE_TRANSFORMER, modify_sd_ops_for_compilation
-from ltx_core.model.upsampler import LatentUpsamplerConfigurator, upsample_video
-from ltx_core.model.video_vae import (
+from genio_core.model.transformer.compiling import COMPILE_TRANSFORMER, modify_sd_ops_for_compilation
+from genio_core.model.upsampler import LatentUpsamplerConfigurator, upsample_video
+from genio_core.model.video_vae import (
     VAE_DECODER_COMFY_KEYS_FILTER,
     VAE_ENCODER_COMFY_KEYS_FILTER,
     TilingConfig,
@@ -50,8 +50,8 @@ from ltx_core.model.video_vae import (
     VideoEncoder,
     VideoEncoderConfigurator,
 )
-from ltx_core.quantization import QuantizationPolicy
-from ltx_core.text_encoders.gemma import (
+from genio_core.quantization import QuantizationPolicy
+from genio_core.text_encoders.gemma import (
     EMBEDDINGS_PROCESSOR_KEY_OPS,
     GEMMA_LLM_KEY_OPS,
     GEMMA_MODEL_OPS,
@@ -59,10 +59,10 @@ from ltx_core.text_encoders.gemma import (
     GemmaTextEncoderConfigurator,
     module_ops_from_gemma_root,
 )
-from ltx_core.text_encoders.gemma.embeddings_processor import EmbeddingsProcessorOutput
-from ltx_core.tools import AudioLatentTools, LatentTools, VideoLatentTools
-from ltx_core.types import Audio, AudioLatentShape, LatentState, VideoLatentShape, VideoPixelShape
-from ltx_core.utils import find_matching_file
+from genio_core.text_encoders.gemma.embeddings_processor import EmbeddingsProcessorOutput
+from genio_core.tools import AudioLatentTools, LatentTools, VideoLatentTools
+from genio_core.types import Audio, AudioLatentShape, LatentState, VideoLatentShape, VideoPixelShape
+from genio_core.utils import find_matching_file
 from ltx_pipelines.utils.gpu_model import gpu_model
 from ltx_pipelines.utils.helpers import (
     cleanup_memory,

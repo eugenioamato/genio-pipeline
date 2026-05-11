@@ -5,17 +5,17 @@ import torch
 from einops import rearrange
 from safetensors import safe_open
 
-from ltx_core.components.noisers import GaussianNoiser
-from ltx_core.conditioning import (
+from genio_core.components.noisers import GaussianNoiser
+from genio_core.conditioning import (
     ConditioningItem,
     ConditioningItemAttentionStrengthWrapper,
     VideoConditionByReferenceLatent,
 )
-from ltx_core.loader import LoraPathStrengthAndSDOps
-from ltx_core.loader.registry import Registry
-from ltx_core.model.video_vae import TilingConfig, VideoEncoder, get_video_chunks_number
-from ltx_core.quantization import QuantizationPolicy
-from ltx_core.types import Audio, VideoLatentShape, VideoPixelShape
+from genio_core.loader import LoraPathStrengthAndSDOps
+from genio_core.loader.registry import Registry
+from genio_core.model.video_vae import TilingConfig, VideoEncoder, get_video_chunks_number
+from genio_core.quantization import QuantizationPolicy
+from genio_core.types import Audio, VideoLatentShape, VideoPixelShape
 from ltx_pipelines.utils.args import (
     ImageConditioningInput,
     VideoConditioningAction,

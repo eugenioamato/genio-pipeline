@@ -3,12 +3,12 @@ from collections.abc import Iterator
 
 import torch
 
-from ltx_core.components.noisers import GaussianNoiser
-from ltx_core.loader import LoraPathStrengthAndSDOps
-from ltx_core.loader.registry import Registry
-from ltx_core.model.video_vae import TilingConfig, get_video_chunks_number
-from ltx_core.quantization import QuantizationPolicy
-from ltx_core.types import Audio
+from genio_core.components.noisers import GaussianNoiser
+from genio_core.loader import LoraPathStrengthAndSDOps
+from genio_core.loader.registry import Registry
+from genio_core.model.video_vae import TilingConfig, get_video_chunks_number
+from genio_core.quantization import QuantizationPolicy
+from genio_core.types import Audio
 from ltx_pipelines.utils.args import (
     ImageConditioningInput,
     default_2_stage_distilled_arg_parser,

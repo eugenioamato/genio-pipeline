@@ -10,15 +10,15 @@ all guidance passes into a single transformer call.
 
 import torch
 
-from ltx_core.components.guiders import MultiModalGuider, MultiModalGuiderFactory, MultiModalGuiderParams
-from ltx_core.guidance.perturbations import (
+from genio_core.components.guiders import MultiModalGuider, MultiModalGuiderFactory, MultiModalGuiderParams
+from genio_core.guidance.perturbations import (
     BatchedPerturbationConfig,
     Perturbation,
     PerturbationConfig,
     PerturbationType,
 )
-from ltx_core.model.transformer import X0Model
-from ltx_core.types import LatentState
+from genio_core.model.transformer import X0Model
+from genio_core.types import LatentState
 from ltx_pipelines.utils.helpers import modality_from_latent_state
 
 _POSITIVE_ONLY_GUIDER = MultiModalGuider(

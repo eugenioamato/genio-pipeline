@@ -3,18 +3,18 @@ from collections.abc import Iterator
 
 import torch
 
-from ltx_core.components.guiders import (
+from genio_core.components.guiders import (
     MultiModalGuiderFactory,
     MultiModalGuiderParams,
     create_multimodal_guider_factory,
 )
-from ltx_core.components.noisers import GaussianNoiser
-from ltx_core.components.schedulers import LTX2Scheduler
-from ltx_core.loader import LoraPathStrengthAndSDOps
-from ltx_core.loader.registry import Registry
-from ltx_core.model.video_vae.tiling import TilingConfig
-from ltx_core.quantization import QuantizationPolicy
-from ltx_core.types import Audio
+from genio_core.components.noisers import GaussianNoiser
+from genio_core.components.schedulers import LTX2Scheduler
+from genio_core.loader import LoraPathStrengthAndSDOps
+from genio_core.loader.registry import Registry
+from genio_core.model.video_vae.tiling import TilingConfig
+from genio_core.quantization import QuantizationPolicy
+from genio_core.types import Audio
 from ltx_pipelines.utils import (
     assert_resolution,
     combined_image_conditionings,
