@@ -63,14 +63,14 @@ from genio_core.text_encoders.gemma.embeddings_processor import EmbeddingsProces
 from genio_core.tools import AudioLatentTools, LatentTools, VideoLatentTools
 from genio_core.types import Audio, AudioLatentShape, LatentState, VideoLatentShape, VideoPixelShape
 from genio_core.utils import find_matching_file
-from ltx_pipelines.utils.gpu_model import gpu_model
-from ltx_pipelines.utils.helpers import (
+from genio_pipeline.utils.gpu_model import gpu_model
+from genio_pipeline.utils.helpers import (
     cleanup_memory,
     create_noised_state,
     generate_enhanced_prompt,
 )
-from ltx_pipelines.utils.samplers import euler_denoising_loop
-from ltx_pipelines.utils.types import Denoiser, ModalitySpec
+from genio_pipeline.utils.samplers import euler_denoising_loop
+from genio_pipeline.utils.types import Denoiser, ModalitySpec
 
 logger = logging.getLogger(__name__)
 

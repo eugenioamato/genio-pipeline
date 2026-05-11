@@ -13,7 +13,7 @@ from torch._prims_common import DeviceLikeType
 from tqdm import tqdm
 
 from genio_core.types import Audio, VideoPixelShape
-from ltx_pipelines.utils.constants import DEFAULT_IMAGE_CRF
+from genio_pipeline.utils.constants import DEFAULT_IMAGE_CRF
 
 logger = logging.getLogger(__name__)
 

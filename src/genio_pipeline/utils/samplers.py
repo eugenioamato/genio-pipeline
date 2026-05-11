@@ -10,9 +10,9 @@ from genio_core.components.diffusion_steps import Res2sDiffusionStep
 from genio_core.components.protocols import DiffusionStepProtocol
 from genio_core.model.transformer import X0Model
 from genio_core.utils import to_denoised, to_velocity
-from ltx_pipelines.utils.helpers import post_process_latent, timesteps_from_mask
-from ltx_pipelines.utils.res2s import get_res2s_coefficients
-from ltx_pipelines.utils.types import Denoiser, LatentState
+from genio_pipeline.utils.helpers import post_process_latent, timesteps_from_mask
+from genio_pipeline.utils.res2s import get_res2s_coefficients
+from genio_pipeline.utils.types import Denoiser, LatentState
 
 logger = logging.getLogger(__name__)
 

@@ -15,8 +15,8 @@ from genio_core.model.video_vae import TilingConfig, VideoEncoder
 from genio_core.text_encoders.gemma import GemmaTextEncoder
 from genio_core.tools import LatentTools
 from genio_core.types import AudioLatentShape, LatentState, VideoLatentShape, VideoPixelShape
-from ltx_pipelines.utils.args import ImageConditioningInput
-from ltx_pipelines.utils.media_io import (
+from genio_pipeline.utils.args import ImageConditioningInput
+from genio_pipeline.utils.media_io import (
     decode_audio_from_file,
     decode_image,
     decode_video_from_file,

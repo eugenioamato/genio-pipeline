@@ -12,8 +12,8 @@ from genio_core.loader.registry import Registry
 from genio_core.model.video_vae import TilingConfig, get_video_chunks_number
 from genio_core.quantization import QuantizationPolicy
 from genio_core.types import Audio, VideoLatentShape, VideoPixelShape
-from ltx_pipelines.utils.args import ImageConditioningInput, hq_2_stage_arg_parser
-from ltx_pipelines.utils.blocks import (
+from genio_pipeline.utils.args import ImageConditioningInput, hq_2_stage_arg_parser
+from genio_pipeline.utils.blocks import (
     AudioDecoder,
     DiffusionStage,
     ImageConditioner,
@@ -21,19 +21,19 @@ from ltx_pipelines.utils.blocks import (
     VideoDecoder,
     VideoUpsampler,
 )
-from ltx_pipelines.utils.constants import (
+from genio_pipeline.utils.constants import (
     LTX_2_3_HQ_PARAMS,
     STAGE_2_DISTILLED_SIGMAS,
 )
-from ltx_pipelines.utils.denoisers import GuidedDenoiser, SimpleDenoiser
-from ltx_pipelines.utils.helpers import (
+from genio_pipeline.utils.denoisers import GuidedDenoiser, SimpleDenoiser
+from genio_pipeline.utils.helpers import (
     assert_resolution,
     combined_image_conditionings,
     get_device,
 )
-from ltx_pipelines.utils.media_io import encode_video
-from ltx_pipelines.utils.samplers import res2s_audio_video_denoising_loop
-from ltx_pipelines.utils.types import ModalitySpec
+from genio_pipeline.utils.media_io import encode_video
+from genio_pipeline.utils.samplers import res2s_audio_video_denoising_loop
+from genio_pipeline.utils.types import ModalitySpec
 
 
 class TI2VidTwoStagesHQPipeline:

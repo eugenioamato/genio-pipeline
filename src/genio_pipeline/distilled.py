@@ -9,12 +9,12 @@ from genio_core.loader.registry import Registry
 from genio_core.model.video_vae import TilingConfig, get_video_chunks_number
 from genio_core.quantization import QuantizationPolicy
 from genio_core.types import Audio
-from ltx_pipelines.utils.args import (
+from genio_pipeline.utils.args import (
     ImageConditioningInput,
     default_2_stage_distilled_arg_parser,
     detect_checkpoint_path,
 )
-from ltx_pipelines.utils.blocks import (
+from genio_pipeline.utils.blocks import (
     AudioDecoder,
     DiffusionStage,
     ImageConditioner,
@@ -22,19 +22,19 @@ from ltx_pipelines.utils.blocks import (
     VideoDecoder,
     VideoUpsampler,
 )
-from ltx_pipelines.utils.constants import (
+from genio_pipeline.utils.constants import (
     DISTILLED_SIGMAS,
     STAGE_2_DISTILLED_SIGMAS,
     detect_params,
 )
-from ltx_pipelines.utils.denoisers import SimpleDenoiser
-from ltx_pipelines.utils.helpers import (
+from genio_pipeline.utils.denoisers import SimpleDenoiser
+from genio_pipeline.utils.helpers import (
     assert_resolution,
     combined_image_conditionings,
     get_device,
 )
-from ltx_pipelines.utils.media_io import encode_video
-from ltx_pipelines.utils.types import ModalitySpec
+from genio_pipeline.utils.media_io import encode_video
+from genio_pipeline.utils.types import ModalitySpec
 
 
 class DistilledPipeline:

@@ -4,7 +4,7 @@ from typing import NamedTuple
 
 from genio_core.loader import LTXV_LORA_COMFY_RENAMING_MAP, LoraPathStrengthAndSDOps
 from genio_core.quantization import QuantizationPolicy
-from ltx_pipelines.utils.constants import (
+from genio_pipeline.utils.constants import (
     DEFAULT_IMAGE_CRF,
     DEFAULT_LORA_STRENGTH,
     DEFAULT_NEGATIVE_PROMPT,

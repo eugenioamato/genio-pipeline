@@ -15,23 +15,23 @@ from genio_core.loader.registry import Registry
 from genio_core.model.video_vae.tiling import TilingConfig
 from genio_core.quantization import QuantizationPolicy
 from genio_core.types import Audio
-from ltx_pipelines.utils import (
+from genio_pipeline.utils import (
     assert_resolution,
     combined_image_conditionings,
     get_device,
 )
-from ltx_pipelines.utils.args import ImageConditioningInput, default_1_stage_arg_parser, detect_checkpoint_path
-from ltx_pipelines.utils.blocks import (
+from genio_pipeline.utils.args import ImageConditioningInput, default_1_stage_arg_parser, detect_checkpoint_path
+from genio_pipeline.utils.blocks import (
     AudioDecoder,
     DiffusionStage,
     ImageConditioner,
     PromptEncoder,
     VideoDecoder,
 )
-from ltx_pipelines.utils.constants import detect_params
-from ltx_pipelines.utils.denoisers import FactoryGuidedDenoiser
-from ltx_pipelines.utils.media_io import encode_video
-from ltx_pipelines.utils.types import ModalitySpec
+from genio_pipeline.utils.constants import detect_params
+from genio_pipeline.utils.denoisers import FactoryGuidedDenoiser
+from genio_pipeline.utils.media_io import encode_video
+from genio_pipeline.utils.types import ModalitySpec
 
 
 class TI2VidOneStagePipeline:

@@ -4,7 +4,7 @@ from typing import TypeVar
 
 import torch
 
-from ltx_pipelines.utils.helpers import cleanup_memory
+from genio_pipeline.utils.helpers import cleanup_memory
 
 _M = TypeVar("_M", bound=torch.nn.Module)
 

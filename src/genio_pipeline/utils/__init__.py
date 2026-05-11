@@ -1,4 +1,4 @@
-from ltx_pipelines.utils.blocks import (
+from genio_pipeline.utils.blocks import (
     AudioConditioner,
     AudioDecoder,
     DiffusionStage,
@@ -7,20 +7,20 @@ from ltx_pipelines.utils.blocks import (
     VideoDecoder,
     VideoUpsampler,
 )
-from ltx_pipelines.utils.denoisers import FactoryGuidedDenoiser, GuidedDenoiser, SimpleDenoiser
-from ltx_pipelines.utils.helpers import (
+from genio_pipeline.utils.denoisers import FactoryGuidedDenoiser, GuidedDenoiser, SimpleDenoiser
+from genio_pipeline.utils.helpers import (
     assert_resolution,
     cleanup_memory,
     combined_image_conditionings,
     get_device,
     image_conditionings_by_adding_guiding_latent,
 )
-from ltx_pipelines.utils.samplers import (
+from genio_pipeline.utils.samplers import (
     euler_denoising_loop,
     gradient_estimating_euler_denoising_loop,
     res2s_audio_video_denoising_loop,
 )
-from ltx_pipelines.utils.types import Denoiser, ModalitySpec
+from genio_pipeline.utils.types import Denoiser, ModalitySpec
 
 __all__ = [
     "AudioConditioner",

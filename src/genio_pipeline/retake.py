@@ -16,8 +16,8 @@ from genio_core.quantization import QuantizationPolicy
 from genio_core.types import (
     SpatioTemporalScaleFactors,
 )
-from ltx_pipelines.utils.args import video_editing_arg_parser
-from ltx_pipelines.utils.blocks import (
+from genio_pipeline.utils.args import video_editing_arg_parser
+from genio_pipeline.utils.blocks import (
     AudioConditioner,
     AudioDecoder,
     DiffusionStage,
@@ -25,18 +25,18 @@ from ltx_pipelines.utils.blocks import (
     PromptEncoder,
     VideoDecoder,
 )
-from ltx_pipelines.utils.constants import DISTILLED_SIGMAS, detect_params
-from ltx_pipelines.utils.denoisers import GuidedDenoiser, SimpleDenoiser
-from ltx_pipelines.utils.helpers import (
+from genio_pipeline.utils.constants import DISTILLED_SIGMAS, detect_params
+from genio_pipeline.utils.denoisers import GuidedDenoiser, SimpleDenoiser
+from genio_pipeline.utils.helpers import (
     audio_latent_from_file,
     get_device,
     video_latent_from_file,
 )
-from ltx_pipelines.utils.media_io import (
+from genio_pipeline.utils.media_io import (
     encode_video,
     get_videostream_metadata,
 )
-from ltx_pipelines.utils.types import ModalitySpec
+from genio_pipeline.utils.types import ModalitySpec
 
 
 class RetakePipeline:

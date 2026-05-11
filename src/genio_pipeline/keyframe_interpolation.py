@@ -15,8 +15,8 @@ from genio_core.loader.registry import Registry
 from genio_core.model.video_vae import TilingConfig, get_video_chunks_number
 from genio_core.quantization import QuantizationPolicy
 from genio_core.types import Audio, VideoPixelShape
-from ltx_pipelines.utils.args import ImageConditioningInput, default_2_stage_arg_parser, detect_checkpoint_path
-from ltx_pipelines.utils.blocks import (
+from genio_pipeline.utils.args import ImageConditioningInput, default_2_stage_arg_parser, detect_checkpoint_path
+from genio_pipeline.utils.blocks import (
     AudioDecoder,
     DiffusionStage,
     ImageConditioner,
@@ -24,18 +24,18 @@ from ltx_pipelines.utils.blocks import (
     VideoDecoder,
     VideoUpsampler,
 )
-from ltx_pipelines.utils.constants import (
+from genio_pipeline.utils.constants import (
     STAGE_2_DISTILLED_SIGMAS,
     detect_params,
 )
-from ltx_pipelines.utils.denoisers import FactoryGuidedDenoiser, SimpleDenoiser
-from ltx_pipelines.utils.helpers import (
+from genio_pipeline.utils.denoisers import FactoryGuidedDenoiser, SimpleDenoiser
+from genio_pipeline.utils.helpers import (
     assert_resolution,
     get_device,
     image_conditionings_by_adding_guiding_latent,
 )
-from ltx_pipelines.utils.media_io import encode_video
-from ltx_pipelines.utils.types import ModalitySpec
+from genio_pipeline.utils.media_io import encode_video
+from genio_pipeline.utils.types import ModalitySpec
 
 
 class KeyframeInterpolationPipeline:
